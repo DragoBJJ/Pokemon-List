@@ -13,12 +13,18 @@ const spin = keyframes`
 `;
 
 export const ButtonWrapper = styled.button`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 20px 10px;
   background: ${props => props.background || 'palevioletred'};
   border-radius: ${props => props.radius ? '8px' : '0'};
   color: white;
   margin: 4px 8px;
   min-width: 150px;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
 
   ${props => props.radius && css`
     background: pink;
@@ -27,6 +33,11 @@ export const ButtonWrapper = styled.button`
 
   & > span {
     color: black;
+    padding-left: 10px;
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 `;
 
