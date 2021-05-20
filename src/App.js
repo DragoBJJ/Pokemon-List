@@ -1,26 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-
-import SearchOverlay from './components/SearchOverlay';
+import React from 'react';
+import StdButton from './components/StdButton';
 
 function App() {
+  const [loading, setLoading] = React.useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SearchOverlay />
-        </a>
-      </header>
-    </div>
+  <div>
+    <StdButton loading={loading} text="Jestem przyciskiem" radius background="#28C82D" />
+  </div>
   );
 }
 
