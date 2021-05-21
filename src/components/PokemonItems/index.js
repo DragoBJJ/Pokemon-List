@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
-import { ItemsWrapper } from './style';
+import { PokemonWrapper } from './style';
 import Item from '../Item/index';
 
 import { getPokemonData } from '../../api/';
 
-const ItemsContainer = () => {
+const PokemonItems = () => {
   const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
@@ -14,12 +14,19 @@ const ItemsContainer = () => {
 
   console.log(pokemon[0]);
   return (
-    <ItemsWrapper>
+    <PokemonWrapper>
       <Item />
       <Item />
       <Item />
-    </ItemsWrapper>
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+    </PokemonWrapper>
   );
 };
 
-export default ItemsContainer;
+export default PokemonItems;

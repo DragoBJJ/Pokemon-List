@@ -1,10 +1,10 @@
 import { WrapperHomePage } from './styles';
-import ItemsContainer from '../../components/ItemsContainer';
+import PokemonItems from '../../components/PokemonItems';
 
 const HomePage = () => {
   return (
     <WrapperHomePage>
-      <ItemsContainer />
+      <PokemonItems />
     </WrapperHomePage>
   );
 };
