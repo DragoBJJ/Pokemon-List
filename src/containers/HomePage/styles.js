@@ -5,15 +5,11 @@ import { respondTo } from '../../utils/mediaQueryMixin';
 
 export const WrapperHomePage = styled.div`
   position: relative;
-  height: 100%;
+  height: auto;
   width: 100vw;
   background-image: url(${pokemon});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  ${respondTo.md`
-    height :auto;
-  `}
 `;

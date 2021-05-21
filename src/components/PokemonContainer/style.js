@@ -4,7 +4,7 @@ import { respondTo } from '../../utils/mediaQueryMixin';
 
 export const PokemonWrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
   padding-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
