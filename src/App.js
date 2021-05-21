@@ -1,13 +1,16 @@
 import React from 'react';
-import StdButton from './components/StdButton';
+import HomePage from './containers/HomePage';
+
+import GlobalStyles from './theme/globalStyles';
+import { ThemeProvider } from 'styled-components';
+import { Theme } from './theme/theme';
 
 function App() {
-  const [loading, setLoading] = React.useState(true);
-
   return (
-  <div>
-    <StdButton loading={loading} text="Jestem przyciskiem" radius background="#28C82D" />
-  </div>
+    <ThemeProvider theme={Theme}>
+      <GlobalStyles />
+      <HomePage />
+    </ThemeProvider>
   );
 }
 
