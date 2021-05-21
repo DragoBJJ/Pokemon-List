@@ -2,6 +2,7 @@ import {
     createGlobalStyle
 } from "styled-components"
 
+
 const GlobalStyles = createGlobalStyle `
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
   *, *::before, *::after {
