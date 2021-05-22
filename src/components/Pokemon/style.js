@@ -7,6 +7,11 @@ const pokemonAnimation = keyframes`
  100% { height: 180px; width: 150px; opacity: 1; }
 `;
 
+const statsAnimation = keyframes`
+0% {opacity: 0.1}
+100% {opacity: 1}
+`;
+
 export const WrapperItem = styled.div`
   position: relative;
   padding: 1rem 0;
@@ -41,6 +46,7 @@ export const WrapperStats = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  animation: ${statsAnimation} 4s infinite;
 `;
 
 export const PokemonName = styled.h2`

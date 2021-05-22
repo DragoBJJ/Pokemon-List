@@ -38,7 +38,7 @@ const Pokemon = ({ name, data, status }) => {
           </PokemonStats>
           {abilities.map((item, index) => (
             <PokemonStats key={index}>
-              {item.ability.name}: {item.slot} <Damage>Hits</Damage>
+              {item.ability.name}: {item.slot} <Damage>Hit</Damage>
             </PokemonStats>
           ))}
         </WrapperStats>
