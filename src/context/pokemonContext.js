@@ -1,6 +1,5 @@
-import { useState, useEffect, createContext, useReducer } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import { getPokemonData } from '../api';
-import { contextReducer } from './contextReducer';
 
 export const PokemonContext = createContext([]);
 
@@ -10,8 +9,6 @@ export const PokemonProvider = ({ children }) => {
   useEffect(() => {
     getPokemonData(setInitState);
   }, []);
-
-  const [state, dispatch] = useReducer(contextReducer, initState);
 
   return (
     <PokemonContext.Provider value={{ pokemonState: initState }}>

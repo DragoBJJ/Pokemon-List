@@ -5,12 +5,11 @@ import { respondTo } from '../../utils/mediaQueryMixin';
 export const PokemonWrapper = styled.div`
   width: 100%;
   height: auto;
-  padding-top: 2rem;
+  padding: 5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   grid-gap: 5rem;
-  border: 2px solid black;
   place-items: center;
 
   ${respondTo.md`

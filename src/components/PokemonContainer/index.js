@@ -6,13 +6,12 @@ import Pokemon from '../Pokemon/index';
 
 const PokemonContainer = () => {
   const { pokemonState } = useContext(PokemonContext);
-  console.log(pokemonState);
 
   return (
     <PokemonWrapper>
-      {pokemonState.map((pokemon) => (
-        <Pokemon key={pokemon.data.id} {...pokemon} />
-      ))}
+      {pokemonState.map((pokemon) => {
+        return <Pokemon key={pokemon.data.id} {...pokemon} />;
+      })}
     </PokemonWrapper>
   );
 };
