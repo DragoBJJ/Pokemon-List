@@ -3,15 +3,16 @@ import { keyframes } from 'styled-components';
 import { respondTo } from '../../utils/mediaQueryMixin';
 
 const pokemonAnimation = keyframes` 
- 0% { height: 20%; width: 20%; opacity:0.1 }
- 100% { height: 50%; width: 50%; opacity: 1; }
+ 0% { height: 20px; width: 20px; opacity:0.1 }
+ 100% { height: 180px; width: 150px; opacity: 1; }
 `;
 
 export const WrapperItem = styled.div`
   position: relative;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
-  height: 360px;
+  height: 400px;
   align-items: center;
   width: 360px;
   border-radius: 30px;
@@ -36,7 +37,7 @@ export const WrapperStats = styled.div`
   display: flex;
   padding-top: 1rem;
   width: 100%;
-  height: 60%;
+  height: 55%;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -61,7 +62,30 @@ export const Damage = styled.strong`
 
 export const Image = styled.img`
   position: absolute;
-  top: 60%;
-  height: 50%;
-  width: 50%;
+  top: 62%;
+  height: 180px;
+  width: 150px;
+`;
+
+export const Button = styled.div`
+  display: flex;
+  position: absolute;
+  top: 80%;
+  right: 5%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid ${({ theme }) => theme.twitters};
+  min-height: 48px;
+  min-width: 80px;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: ${({ theme }) => theme.twitters};
+    border: 2px solid #fff;
+    color: #1d1d1d;
+  }
 `;
