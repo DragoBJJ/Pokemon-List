@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const limit = 20;
+const limit = 5;
 const API_URL = `https://pokeapi.co/api/v2/pokemon?limit=${limit}`;
 
 export const getPokemonData = async (setData) => {

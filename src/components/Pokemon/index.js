@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { PokemonContext } from '../../context/pokemonContext';
+
 import {
   WrapperItem,
   WrapperStats,
@@ -13,6 +15,8 @@ const Pokemon = ({ name, data, status }) => {
   const { base_experience, abilities, height, sprites, id } = data;
 
   const [isVisible, setVisible] = useState(false);
+
+  const { setID } = useContext(PokemonContext);
 
   return (
     <WrapperItem>
@@ -47,6 +51,9 @@ const Pokemon = ({ name, data, status }) => {
       <Image src={sprites.front_default} />
       <Button onClick={() => setVisible((prevState) => !prevState)}>
         {isVisible ? 'Hidden' : 'Show'}
+      </Button>
+      <Button left onClick={() => setID(id)}>
+        Transfer
       </Button>
     </WrapperItem>
   );

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { keyframes } from 'styled-components';
+import { keyframes, css } from 'styled-components';
 import { respondTo } from '../../utils/mediaQueryMixin';
 
 const pokemonAnimation = keyframes` 
@@ -50,7 +50,7 @@ export const WrapperStats = styled.div`
 `;
 
 export const PokemonName = styled.h2`
-  font-size: ${({ theme }) => theme.fontSize.xl};
+  font-size: ${({ theme, big }) => (big ? '46px' : theme.fontSize.xl)};
   color: ${({ theme }) => theme.twitters};
   letter-spacing: 5px;
 `;
@@ -77,7 +77,8 @@ export const Button = styled.div`
   display: flex;
   position: absolute;
   top: 80%;
-  right: 5%;
+  right: ${({ left }) => (left ? null : '5%')};
+  left: ${({ left }) => (left ? '5%' : null)};
   justify-content: center;
   align-items: center;
   text-align: center;
