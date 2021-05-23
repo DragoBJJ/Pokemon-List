@@ -12,7 +12,7 @@ const DetailsContainer = ({
   stats,
 }) => {
   return (
-    <DetailsWrapper>
+    <DetailsWrapper id='Details'>
       {name && (
         <>
           <WrapperStats>

@@ -1,4 +1,7 @@
 import { useState, useContext } from 'react';
+
+import { Link, animateScroll as Scroll } from 'react-scroll';
+
 import { PokemonContext } from '../../context/pokemonContext';
 
 import {
@@ -52,7 +55,16 @@ const Pokemon = ({ name, data, status }) => {
       <Button onClick={() => setVisible((prevState) => !prevState)}>
         {isVisible ? 'Hidden' : 'Show'}
       </Button>
-      <Button left onClick={() => setID(id)}>
+      <Button
+        as={Link}
+        to='Details'
+        duration={1000}
+        smooth={true}
+        spy={true}
+        activeClass='active'
+        left
+        onClick={() => setID(id)}
+      >
         Transfer
       </Button>
     </WrapperItem>
