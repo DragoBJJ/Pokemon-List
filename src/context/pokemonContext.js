@@ -5,11 +5,14 @@ export const PokemonContext = createContext([]);
 
 export const PokemonProvider = ({ children }) => {
   const [pokemonState, setInitState] = useState([]);
+
   const [currentPokemonID, setID] = useState(null);
   const [currentPokemon, setCurrentPokemon] = useState([]);
 
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
-    getPokemonData(setInitState);
+    getPokemonData(setInitState).then(() => setLoading(true));
   }, []);
 
   return (
@@ -20,6 +23,7 @@ export const PokemonProvider = ({ children }) => {
         setID,
         currentPokemon,
         setCurrentPokemon,
+        loading,
       }}
     >
       {children}

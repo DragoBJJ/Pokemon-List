@@ -14,7 +14,7 @@ import {
   Button,
 } from './style';
 
-const Pokemon = ({ name, data, status }) => {
+const Pokemon = ({ name, data, status = null }) => {
   const { base_experience, abilities, height, sprites, id } = data;
 
   const [isVisible, setVisible] = useState(false);

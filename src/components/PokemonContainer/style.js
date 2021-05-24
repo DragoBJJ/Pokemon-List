@@ -23,3 +23,11 @@ export const PokemonWrapper = styled.div`
    
   `}
 `;
+
+export const WrapperLoader = styled.div`
+  position: relative;
+  display: flex;
+  width: 80vw;
+  justify-content: center;
+  align-items: center;
+`;
